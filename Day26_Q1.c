@@ -20,11 +20,11 @@ Output 1:
 #include <stdio.h>
 int main(){
 
-for(int i = 5;i >= 1;i--){
-    for(int sp = 0;sp < i;sp++){
+for(int i = 5;i >= 1;i--){         //loop for rows
+    for(int sp = 0;sp < i;sp++){     //loop prints spaces
     printf(" ");
     }
-    for(int j = i;j<=5;j++){
+    for(int j = i;j<=5;j++){      //loop prints numbers
         printf("%d",j);
     }
     printf("\n");
