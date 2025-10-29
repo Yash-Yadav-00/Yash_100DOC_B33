@@ -21,8 +21,8 @@ Output 1:
 
 int main(){
 
-    for(int i =5;i >=1;i--){
-        for(int j = i; j <= 5;j++){
+    for(int i =5;i >=1;i--){      //loop checks line 
+        for(int j = i; j <= 5;j++){     //loop prints numbers 
             printf("%d",j);
         }
         printf("\n");
