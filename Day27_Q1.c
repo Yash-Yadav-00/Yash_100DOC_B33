@@ -30,7 +30,7 @@
 int main()
 {
 
-    for (int i = 0; i <= 9; i++)
+    for (int i = 0; i <= 9; i++)    //loop for upper triangle
     {
         if (i % 2 == 0)
         {
@@ -42,7 +42,7 @@ int main()
         }
     }
 
-    for (int i = 7; i >= 0; i--)
+    for (int i = 7; i >= 0; i--)      //loop for lower triangle
     {
         if (i % 2 == 0)
         {
