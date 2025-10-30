@@ -1,9 +1,9 @@
-//Q50: Write a program to print the following pattern:
+// Q50: Write a program to print the following pattern:
 //*****
-// ****
-//  ***
-//   **
-//    *
+//  ****
+//   ***
+//    **
+//     *
 
 /*
 Sample Test Cases:
@@ -23,16 +23,21 @@ Note: Spaces indicate indentation.
 
 */
 #include <stdio.h>
-int main(){
+int main()
+{
 
-for(int i = 0;i < 5;i++){
-    for(int j = 0;j<=i;j++){
-        printf(" ");
+    for (int i = 0; i < 5; i++) // loop for rows
+    {
+        for (int j = 0; j < i; j++) // loop for printing spaces
+        {
+            printf(" ");
+        }
+        for (int k = i; k < 5; k++) // loop for printing stars
+        {
+            printf("*");
+        }
+        printf("\n"); // Moves to a new line after complition of printing
     }
-    printf("*");
-    printf("\n");
-}
-
 
     return 0;
 }
