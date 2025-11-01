@@ -1,4 +1,4 @@
-//Q34: Write a program to check if a number is prime.
+// Q34: Write a program to check if a number is prime.
 
 /*
 Sample Test Cases:
@@ -15,26 +15,26 @@ Not prime
 */
 #include <stdio.h>
 
-int main(){
+int main()
+{
 
-    int a,n,num;                        
-    
-    printf("Enter a Number: ");
-    scanf("%d",&a);
+    int a, n; // a = num provided by user , n = temp variable to store a
 
-    a = n;
+    printf("Enter a Number: "); // Take input from user
+    scanf("%d", &a);
 
-    for(int i = 0;i < a;i++){
-        if( n % i == 0){
-            printf("Prime");
-        }
-        else {
+    n = a; // Store value of a
+
+    for (int i = 2; i < a; i++) // Loop start from 2 because 2 is smallest divisor
+    {
+        if (n % i == 0)
+        {
             printf("Not Prime");
+            return 0;
         }
     }
 
-
-
+    printf("Prime");
 
     return 0;
 }
