@@ -1,4 +1,4 @@
-//Q36: Write a program to find the HCF (GCD) of two numbers.
+// Q36: Write a program to find the HCF (GCD) of two numbers.
 
 /*
 Sample Test Cases:
@@ -14,18 +14,24 @@ Output 2:
 
 */
 #include <stdio.h>
-int main(){
-    int n,gcd,a;                                         //Declare Variables
 
-    printf("Enter 2 Numbers: ");                        //Take Input From User 
-    scanf("%d%d",&n,&a);
+int main()
+{
+    int a, n, gcd;
 
-    for (int i = 1; i <= n && i <= a; i++){          //Loop will run until i is less than any of the number
-        a = a / i;
-        n = n / i;
-        if(a == n){
-            printf("%d",i);
+    printf("Enter 2 Numbers: ");
+    scanf("%d %d", &a, &n);
+
+    // Loop from 1 to the smaller number
+    for (int i = 1; i <= a && i <= n; i++)
+    {
+        if (a % i == 0 && n % i == 0)
+        {            // if 'i' divides both numbers
+            gcd = i; // store current i as gcd
         }
-
     }
+
+    printf("HCF (GCD) = %d", gcd);
+
+    return 0;
 }
