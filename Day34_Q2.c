@@ -14,30 +14,34 @@
 int main()
 {
 
-    int a,b;
+    int a, b;
     int arr[10];
 
-    printf("Enter the number of elements: ");  //no. of elements
+    printf("Enter the number of elements: "); // no. of elements
     scanf("%d", &a);
-   
 
-    printf("Enter your Elements: ");  //take input of elements
+    printf("Enter your Elements: "); // take input of elements
     for (int i = 0; i < a; i++)
     {
-        scanf("%d", &arr[i]);         //stores every elements in array
+        scanf("%d", &arr[i]); // stores every elements in array
     }
- printf("Enter the Element You want to delete: ");
- scanf("%d",&b);
+    printf("Enter the Element You want to delete: "); // Input the element to be Deleted
+    scanf("%d", &b);
 
-
-
- for(int k = b;k<a;k++){
+    for (int k = 0; k < a; k++) // loop goes until k is less than a
     {
-        arr[k]=arr[k+1];
+        {
+            if (arr[k] == b) // if the number is equal to the element in array
+            {
+                for (int i = arr[k]; i < a; i++) // shift all the element to the left after the elment to be removed
+                {
+                    arr[i] = arr[i + 1];
+                }
+            }
+        }
     }
-
- }
-    for (int j = 0; j < a; j++)   //prints the stored elements
+    a--;                        // Reduce array size by 1
+    for (int j = 0; j < a; j++) // prints the stored elements
     {
         printf("%d ", arr[j]);
     }
