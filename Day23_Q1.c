@@ -1,4 +1,4 @@
-//Q45: Write a program to find the sum of the series: 2/3 + 4/7 + 6/11 + 8/15 + ... up to n terms.
+// Q45: Write a program to find the sum of the series: 2/3 + 4/7 + 6/11 + 8/15 + ... up to n terms.
 
 /*
 Sample Test Cases:
@@ -13,3 +13,24 @@ Output 2:
 Approximate sum: 2.22
 
 */
+#include <stdio.h>
+
+int main()
+{
+    int n, i; // Declare Variable
+    float num = 2, den = 3, sum = 0;
+
+    printf("Enter Your Number: "); // Take Input From User
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        sum = sum + num / den;
+        num = num + 2; // next numerator
+        den = den + 4; // next denominator
+    }
+
+    printf("Approximate sum: %.2f", sum); // Display Output
+
+    return 0;
+}
