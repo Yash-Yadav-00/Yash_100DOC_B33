@@ -1,4 +1,4 @@
-//Q44: Write a program to find the sum of the series: 1 + 3/4 + 5/6 + 7/8 + … up to n terms.
+// Q44: Write a program to find the sum of the series: 1 + 3/4 + 5/6 + 7/8 + … up to n terms.
 
 /*
 Sample Test Cases:
@@ -14,22 +14,23 @@ Approximate sum: 4.4
 
 */
 #include <stdio.h>
-int main(){
+int main()
+{
 
-    int a, n,num = 1 ,den = 1;               //Declare Variables
-    float sum = 0;
-    printf("Enter Your Number: ");                 //Take Input From User
-    scanf("%d",&a);
+    int a, n; // Declare Variables
+    float sum = 1, num = 3, den = 4;
+    printf("Enter Your Number: "); // Take Input From User
+    scanf("%d", &a);
 
-    for(n=1; n < a; n++){
+    for (n = 1; n < a; n++) // Calculate Sum of Series
+    {
 
-        num = num + 1;
-        den = den +2;
-
-        sum = sum + num/den;
+        sum = sum + num / den;
+        num = num + 2;
+        den = den + 2;
     }
 
-    printf("Approximate value= %.1f",sum);
+    printf("Approximate value= %.1f", sum); // Display Output
 
     return 0;
 }
